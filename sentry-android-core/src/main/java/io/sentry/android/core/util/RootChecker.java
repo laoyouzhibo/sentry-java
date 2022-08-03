@@ -156,17 +156,17 @@ public final class RootChecker {
    * @return whether the root packages exist or not
    */
   private boolean checkRootPackages() {
-    final PackageManager pm = context.getPackageManager();
-    if (pm != null) {
-      for (final String pkg : rootPackages) {
-        try {
-          pm.getPackageInfo(pkg, 0);
-          return true;
-        } catch (PackageManager.NameNotFoundException ignored) {
-          // fine, package doesn't exist.
-        }
-      }
-    }
+    // final PackageManager pm = context.getPackageManager();
+    // if (pm != null) {
+    //   for (final String pkg : rootPackages) {
+    //     try {
+    //       pm.getPackageInfo(pkg, 0);
+    //       return true;
+    //     } catch (PackageManager.NameNotFoundException ignored) {
+    //       // fine, package doesn't exist.
+    //     }
+    //   }
+    // }
     return false;
   }
 }
